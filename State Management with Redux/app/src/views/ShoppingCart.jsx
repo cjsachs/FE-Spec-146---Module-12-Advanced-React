@@ -1,10 +1,10 @@
 import { Button, Container, ListGroup, ListGroupItem } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { addItem, checkout, removeItem } from "../redux/cartSlice"
-import products from "../data/products"
 
 const ShoppingCart = () => {
     const cart = useSelector((state) => state.cart)
+    const products = useSelector((state) => state.products.items)
     const dispatch = useDispatch()
 
     const handleAddItem = (id) => {
@@ -22,9 +22,10 @@ const ShoppingCart = () => {
     // get product name based off the id
     const getProductName = (id) => {
         const product = products.find((product) => {
+            console.log(product)
             return product.id === Number(id)
         })
-        return product ? product.name : 'Unknown Product'
+        return product ? product.title : 'Unknown Product'
     }
 
   return (

@@ -8,10 +8,10 @@ const HomePage = () => {
   return (
     <Container>
         <p>Current Cart Count: {cartCount}</p>
-        <ProductCatalog/>
         <Link to={'/shoppingCart'}>
           <Button>Go to Cart</Button>
         </Link>
+        <ProductCatalog/>
     </Container>
   )
 }
