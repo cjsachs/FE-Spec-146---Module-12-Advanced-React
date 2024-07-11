@@ -1,6 +1,11 @@
+import ButtonAPICall from "./ButtonAPICall"
+import PostForm from "./PostForm"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <PostForm/>
+    </div>
   )
 }
 export default App

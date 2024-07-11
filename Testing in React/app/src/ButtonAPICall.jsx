@@ -9,6 +9,7 @@ const ButtonAPICall = () => {
   };
   return (
     <div>
+      <h1>{`We're all GOATED`}</h1>
       <button onClick={fetchTodos}>Fetch Todos</button>
     </div>
   );
